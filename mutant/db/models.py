@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.db.migrations.state import ModelState, StateApps
-from django.utils.six import string_types
+from six import string_types
 from django.utils.translation import ugettext_lazy as _
 
 from .. import logger
