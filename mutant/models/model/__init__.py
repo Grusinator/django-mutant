@@ -266,7 +266,7 @@ class ModelDefinition(ContentType):
 
         identifier = (
             self.pk, self.object_name, state.options, dict(
-                (name, field.deconstruct()) for name, field in state.fields
+                (name, field.deconstruct()) for name, field in state.fields.items()
             ), [
                 MutableModelProxy(base).checksum()
                 if base is not MutableModel and issubclass(base, MutableModel) else base

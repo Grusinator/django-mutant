@@ -41,7 +41,7 @@ class MutableModel(models.Model):
     @classmethod
     def get_related_model_states(cls, model_state):
         model_states = {}
-        for _name, field in model_state.fields:
+        for _name, field in model_state.fields.items():
             related_model_reference = get_remote_field_model(field)
             if related_model_reference:
                 related_model = cls._meta.apps.get_model(related_model_reference)
