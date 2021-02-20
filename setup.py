@@ -18,6 +18,7 @@ setup(
         'django>=3.0',
         'django-picklefield>=0.3.2',
         'django-polymodels>=1.4.6a3',
+        'six'
     ],
     packages=find_packages(exclude=['tests', 'tests.*']),
     package_data={
